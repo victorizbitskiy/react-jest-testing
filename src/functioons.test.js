@@ -1,4 +1,4 @@
-import { timesTwo, order } from "./functions";
+import { timesTwo, order, sum, substract } from "./functions";
 
 const menuItems = [
   {
@@ -23,8 +23,16 @@ const menuItems = [
   },
 ];
 
-test('Multiplies by two', () => {
-  expect(timesTwo(4)).toBe(8);
+describe('Math functions', () => {
+  test('Multiplies by two', () => {
+    expect(timesTwo(4)).toBe(8);
+  });
+  test('Adds two numbers', () => {
+    expect(sum(4, 2)).toBe(6);
+  });
+  test('Substracts two numbers', () => {
+    expect(substract(4, 2)).toBe(2);
+  });
 });
 
 test('Build an order object', () => {
@@ -32,6 +40,5 @@ test('Build an order object', () => {
     orderItems: menuItems,
     total: 77
   };
-
   expect(order(menuItems)).toEqual(result);
 });
