@@ -1,4 +1,5 @@
-import { timesTwo, order, sum, substract } from "./functions";
+import { order, substract, sum, timesTwo } from "../functions";
+
 
 const menuItems = [
   {
