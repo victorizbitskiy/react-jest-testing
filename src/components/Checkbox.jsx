@@ -13,7 +13,9 @@ const Checkbox = () => {
         <input
           type="checkbox"
           value={checked}
+          name={"Checkbox"}
           onChange={setChecked}
+          data-testid="checkbox"
         />
       </label>
     </>
